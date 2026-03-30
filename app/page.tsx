@@ -6,7 +6,7 @@ export default function Home() {
         MSc Telecommunication Engineering at Politecnico di Milano.
       </p>
       <p className="mt-2">
-        Research in semantic communication, networking systems, and machine learning.
+        Life long learner.
       </p>
     </main>
   )
