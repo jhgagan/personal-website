@@ -292,7 +292,7 @@ nav .right a:last-child{
 
 .contact-form input:focus, 
 .contact-form textarea:focus {
-    border-color: #007bff; /* Highlight color when clicking */
+    border-color: #0084ff; 
 }
 
 /* The Submit Button */
