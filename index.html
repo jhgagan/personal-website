@@ -251,5 +251,52 @@
             </div>
         </section>
     </main>
+
+    <div id="contactModal" class="modal-overlay">
+        <div class="modal-content">
+            <i class="fa-solid fa-circle-check" style="color: #4a76ee; font-size: 50px; margin-bottom: 20px;"></i>
+            <h3>Message Sent!</h3>
+            <p>Thank you, I will get back to you shortly.</p>
+            <button class="submit-btn" id="closeModal">Close</button>
+        </div>
+    </div>
 </body>
+<script>
+    const form = document.querySelector(".contact-form");
+    const modal = document.getElementById("contactModal");
+    const closeBtn = document.getElementById("closeModal");
+
+    form.onsubmit = async (e) => {
+        e.preventDefault(); 
+        
+        const data = new FormData(form);
+        const response = await fetch(form.action, {
+            method: 'POST',
+            body: data,
+            headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+            // Show the modal
+            modal.style.display = "flex";
+            form.reset(); // Clears the form fields
+        } else {
+            alert("Oops! There was a problem submitting your form.");
+        }
+    };
+
+    // Close the modal when clicking the button
+    closeBtn.onclick = () => {
+        modal.style.display = "none";
+    };
+
+    // Close the modal if user clicks outside the white box
+    window.onclick = (event) => {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    };
+</script>
+
 </html>
+
