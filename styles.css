@@ -173,7 +173,7 @@ nav .right a:last-child{
     align-items: center;
     gap:10px;
 
-    width: 800px;
+    max-width: 800px;
     padding: 10px 20px;
     margin: 10px;
     border: 1.5px solid #d3d3d3;
@@ -218,7 +218,7 @@ nav .right a:last-child{
     justify-self: center;
     gap:10px;
 
-    width: 800px;
+    max-width: 800px;
     padding: 10px 20px;
     margin: 10px;
     border: 1.5px solid #d3d3d3;
@@ -348,7 +348,7 @@ nav .right a:last-child{
     }
 
     nav .right a:last-child {
-         color: var(--text-color);
+        color: var(--text-color);
         background-color: transparent;
         padding: 0;
     }
@@ -459,5 +459,4 @@ nav .right a:last-child{
     text-decoration: none;
     color: #333;
 }
-
 
