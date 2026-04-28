@@ -171,10 +171,10 @@ nav .right a:last-child{
     flex-direction: column;
     justify-self: center;
     align-items: center;
-    gap:10px;
+    gap: 10px;
 
     width: 100%;
-    max-width: 600px;
+    max-width: 800px;
 
     padding: 10px 20px;
     margin: 10px;
@@ -218,10 +218,10 @@ nav .right a:last-child{
     display: flex;
     flex-direction: column;
     justify-self: center;
-    gap:10px;
+    gap: 10px;
 
-    width:100%;
-    max-width: 600px;
+    width: 100%;
+    max-width: 800px;
     padding: 10px 20px;
     margin: 10px;
     border: 1.5px solid #d3d3d3;
