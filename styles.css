@@ -208,25 +208,27 @@ nav .right a:last-child{
 
 .publications-section .cells {
     display: flex;
-    flex-direction: column;
-    align-items: center; 
-    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .publications-section .cells .cell {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 10px;
+    justify-self: center;
+    gap:10px;
 
-    width: 100%;
-    max-width: 1600px; 
-    
-    padding: 20px;
-    margin: 10px 0;
+    width: 800px;
+    padding: 10px 20px;
+    margin: 10px;
     border: 1.5px solid #d3d3d3;
     border-radius: 5px;
     font-size: 18px;
+}
+
+.publications-section .cells .cell:hover {
+    background: #e0e0e0;
+    transform: translateY(-3px);
 }
 
 .publications-section .cells .cell h3 {
@@ -236,7 +238,6 @@ nav .right a:last-child{
 }
 
 /*Section 5: Contact*/
-/* Section 5: Contact */
 .contact-section {
     padding: 0 50px;
     margin-bottom: 100px;
@@ -381,7 +382,7 @@ nav .right a:last-child{
     }
 
     /*Section 4: Publications*/
-    .publication-section {
+    .publications-section {
         padding: 0 20px;
     }
 
@@ -396,6 +397,7 @@ nav .right a:last-child{
 .modal-overlay {
     display: none; /* Hidden by default */
     position: fixed;
+    inset: 0;
     z-index: 1000;
     left: 0;
     top: 0;
@@ -406,15 +408,17 @@ nav .right a:last-child{
     justify-content: center;
 }
 
+
 /* Modal Box */
 .modal-content {
-    background-color: white;
+    position: relative;   /* <-- THIS fixes your close button issue */
+    background: white;
     padding: 40px;
     border-radius: 10px;
-    text-align: center;
-    max-width: 400px;
     width: 90%;
-    animation: popIn 0.3s ease-out;
+    max-width: 500px;
+    text-align: center;
+    animation: popIn 0.2s ease-out;
 }
 
 .modal-content h3 {
@@ -432,4 +436,28 @@ nav .right a:last-child{
     from { transform: scale(0.8); opacity: 0; }
     to { transform: scale(1); opacity: 1; }
 }
+
+/* Make publication cells clickable */
+.publications-section .cells .cell {
+    cursor: pointer;
+    transition: 0.2s;
+    text-decoration: none;
+    color: inherit;
+}
+
+.publications-section .cells .cell:hover {
+    background: #e0e0e0;
+    transform: translateY(-3px);
+}
+
+/* Close button inside modal */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 26px;
+    text-decoration: none;
+    color: #333;
+}
+
 
