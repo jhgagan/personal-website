@@ -68,7 +68,7 @@
             </div>
 
             <div class="headshot">
-                <img src="images\gagan-headshot.webp" alt="Gagan J H headshot">
+                <img src="images/gagan-headshot.webp" alt="Gagan J H headshot">
             </div>
         </section>
 
@@ -164,22 +164,45 @@
                 A selection of my academic and personal projects spanning wireless simulation, edge AI, mobile app development, and graphics programming.
             </div>
             <div class="cells">
-                <div class="cell">
+                <div class="cell" data-modal="pro1">
                     <h3>Semantic Communication Simulation with Sionna</h3>
                     <p>My Master's Thesis project focused on simulating semantic communication via Feature Identification with Sionna. I designed a modular multi-process architecture using gRPC for interprocess communication and utilized Nvidia's Sionna library for physical-layer wireless simulation.</p>
                 </div>
 
-                <div class="cell">
+                <div class="cell" data-modal="pro2">
+                    <h3>Internet of Things</h3>
+                    <p>IOT challenges</p>
+                </div>
+                
+                <div class="cell" data-modal="pro3">
+                    <h3>GeoPhysical Imaging</h3>
+                    <p>GeoPhysical Imaging challenges</p>
+                </div>
+                
+                <div class="cell" data-modal="pro4">
+                    <h3>Design and Performance Evaluation of a UAV Radar Imaging System</h3>
+                    <p>Modeled a UAV radar system to analyze target detection at varying ground ranges. I performed theoretical derivations for antenna gain and power requirements and used MATLAB to simulate the transmission and reception of Linear Frequency Modulation chirp signals. By implementing matched filtering for range compression, achieved significant signal processing gain, effectively isolating target energy from thermal noise.
+                    </p>
+                </div>
+
+                <div class="cell" data-modal="pro5">
+                    <h3>Design and Performance Evaluation of a UAV Radar Imaging System</h3>
+                    <p> This project focused on developing a Synthetic Aperture Radar (SAR) imaging system for UAV platforms. The project involved processing recorded radar echoes using range compression and implementation of the Time Domain Back-Projection (TDBP) algorithm to generate high-resolution environmental images. It also involved noise filtering and performance evaluation. 
+                    </p>
+                </div>
+               
+
+                <div class="cell" data-modal="pro6">
                     <h3>Trenord App with GeoFencing Features</h3>
                     <p>Developed a mobile application implementing geo-fencing to provide location-based notifications, targeted advertisements, and accurate ETA predictions for users.</p>
                 </div>
 
-                <div class="cell">
+                <div class="cell" data-modal="pro7">
                     <h3>Bluetooth-LE 6.0 Distance Estimation</h3>
                     <p>Evaluated BLE 6.0 distance estimation techniques (RSSI, PBR, RTT) against UWB (DS-TWR) technologies. This project utilized TinyML on data collected from a Nordic nRF54L15 Dev Kit for edge AI applications.</p>
                 </div>
 
-                <div class="cell">
+                <div class="cell" data-modal="pro8">
                     <h3>Modular Hospital Ward Planner</h3>
                     <p>Developed a modular hospital ward planner utilizing the Vulkan framework. The project involved implementing vertex and fragment shaders, allowing for asset placement and rotation across multiple camera views.</p>
                 </div>
@@ -251,6 +274,72 @@
         </section>
     </main>
 
+     <!-- Projects Modals -->
+    <div id="pro1" class="modal-overlay pro-modal">
+        <div class="modal-content">
+            <a href="javascript:void(0)" class="close-btn js-close-modal">&times;</a>
+            <h3>Cháksu Dataset</h3>
+            <p>Add DOI / link / abstract here.</p>
+        </div>
+    </div>
+
+    <div id="pro2" class="modal-overlay pro-modal">
+        <div class="modal-content">
+            <a href="javascript:void(0)" class="close-btn js-close-modal">&times;</a>
+            <h3>Optic Disc Segmentation</h3>
+            <p>Add details here.</p>
+        </div>
+    </div>
+
+    <div id="pro3" class="modal-overlay pro-modal">
+        <div class="modal-content">
+            <a href="javascript:void(0)" class="close-btn js-close-modal">&times;</a>
+            <h3>Carotid Artery Segmentation</h3>
+            <p>Add details here.</p>
+        </div>
+    </div>
+
+    <div id="pro4" class="modal-overlay pro-modal">
+        <div class="modal-content">
+            <a href="javascript:void(0)" class="close-btn js-close-modal">&times;</a>
+            <h3>Pupil & Iris Segmentation</h3>
+            <p>Add details here.</p>
+        </div>
+    </div>
+
+    <div id="pro5" class="modal-overlay pro-modal">
+        <div class="modal-content">
+            <a href="javascript:void(0)" class="close-btn js-close-modal">&times;</a>
+            <h3>RaPiD Fundoscope</h3>
+            <p>Add details here.</p>
+        </div>
+    </div>
+
+    <div id="pro6" class="modal-overlay pro-modal">
+        <div class="modal-content">
+            <a href="javascript:void(0)" class="close-btn js-close-modal">&times;</a>
+            <h3>TENCON 2022 Paper</h3>
+            <p>Add details here.</p>
+        </div>
+    </div>
+
+    <div id="pro7" class="modal-overlay pro-modal">
+        <div class="modal-content">
+            <a href="javascript:void(0)" class="close-btn js-close-modal">&times;</a>
+            <h3>INDICON 2023 Paper</h3>
+            <p>Add details here.</p>
+        </div>
+    </div>
+
+        <div id="pro8" class="modal-overlay pro-modal">
+        <div class="modal-content">
+            <a href="javascript:void(0)" class="close-btn js-close-modal">&times;</a>
+            <h3>INDICON 2023 Paper</h3>
+            <p>Add details here.</p>
+        </div>
+    </div>
+
+
     <!-- Publication Modals -->
     <div id="pub1" class="modal-overlay pub-modal">
         <div class="modal-content">
@@ -316,7 +405,7 @@
         </div>
     </div>
 
-
+    <!--Contact Me modal-->
     <div id="contactModal" class="modal-overlay">
         <div class="modal-content">
             <i class="fa-solid fa-circle-check" style="color: #4a76ee; font-size: 50px; margin-bottom: 20px;"></i>

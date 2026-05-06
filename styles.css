@@ -183,9 +183,15 @@ nav .right a:last-child{
     font-size: 18px;
 }
 
+.projects-section .cells .cell:hover {
+    background: #e0e0e0;
+    transform: translateY(-3px);
+}
+
 .projects-section .cells .cell h3 {
     text-align: center;
 }
+
 
 /* Section 4: Publications */
 .publications-section {
