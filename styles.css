@@ -145,6 +145,7 @@ nav .right a:last-child{
     border: 1.5px solid #d3d3d3;
     border-radius: 5px;
     font-size: 18px;
+    background-color: #ffffff;
 }
 
 .skills-section .cells .cell img {
@@ -171,9 +172,10 @@ nav .right a:last-child{
 }
 
 .projects-section .cells {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
 }
 
 .projects-section .cells .cell {
@@ -225,9 +227,10 @@ nav .right a:last-child{
 }
 
 .publications-section .cells {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
 }
 
 .publications-section .cells .cell {
@@ -358,6 +361,13 @@ nav .right a:last-child{
         width: 300px;}
 }
 
+@media (max-width: 900px) {
+    .projects-section .cells,
+    .publications-section .cells {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width: 670px){
     /* Nav Bar*/
     nav{
@@ -437,7 +447,7 @@ nav .right a:last-child{
     padding: 40px;
     border-radius: 10px;
     width: 90%;
-    max-width: 500px;
+    max-width: 800px;
     animation: popIn 0.2s ease-out;
 }
 
@@ -466,6 +476,7 @@ nav .right a:last-child{
     transition: 0.2s;
     text-decoration: none;
     color: inherit;
+    background: #fafafa;
 }
 
 .projects-section .cells .cell:hover {
@@ -479,6 +490,7 @@ nav .right a:last-child{
     transition: 0.2s;
     text-decoration: none;
     color: inherit;
+    background: #fafafa;
 }
 
 .publications-section .cells .cell:hover {
