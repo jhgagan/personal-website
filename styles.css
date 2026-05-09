@@ -101,6 +101,16 @@ nav .right a:last-child{
     width: 350px;
 }
 
+/* Section: Motivational Quote*/
+.motivation-section {
+    padding: 0 50px;
+    margin-bottom: 25px;
+}
+
+.motivation-section h3 {
+    text-align: center;
+}
+
 /* Section 2: Skills*/
 .skills-section {
     padding: 0 50px;
@@ -322,6 +332,8 @@ nav .right a:last-child{
     background-color: #555;
 }
 
+
+
 /* Responsive adjustment for small screens */
 @media (max-width: 600px) {
     .input-group {
@@ -420,24 +432,26 @@ nav .right a:last-child{
 
 /* Modal Box */
 .modal-content {
-    position: relative;   /* <-- THIS fixes your close button issue */
+    position: relative;
     background: white;
     padding: 40px;
     border-radius: 10px;
     width: 90%;
     max-width: 500px;
-    text-align: center;
     animation: popIn 0.2s ease-out;
 }
 
-.modal-content h3 {
+.modal-content h3,
+.modal-content h4 {
     margin-bottom: 10px;
     color: var(--text-color);
+    text-align: center;
 }
 
 .modal-content p {
     margin-bottom: 20px;
     color: #666;
+    text-align: justify;
 }
 
 /* Animation to make it "pop" */
@@ -447,6 +461,19 @@ nav .right a:last-child{
 }
 
 /* Make publication cells clickable */
+.projects-section .cells .cell {
+    cursor: pointer;
+    transition: 0.2s;
+    text-decoration: none;
+    color: inherit;
+}
+
+.projects-section .cells .cell:hover {
+    background: #e0e0e0;
+    transform: translateY(-3px);
+}
+
+
 .publications-section .cells .cell {
     cursor: pointer;
     transition: 0.2s;
