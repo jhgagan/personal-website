@@ -249,7 +249,132 @@ nav .right a:last-child{
     border-radius: 2px;
 }
 
-/* Section 3: Projects */
+/* Section 3: Experience */
+.experience-section {
+    padding: 0 50px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.experience-section h2 {
+    text-align: center;
+    font-size: 35px;
+}
+
+.experience-section .text {
+    text-align: center;
+    margin-bottom: 30px;
+    max-width: 800px;
+}
+
+/* Timeline — alternating left/right */
+.timeline {
+    position: relative;
+    width: 100%;
+    max-width: 860px;
+}
+
+/* Center vertical line */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    transform: translateX(-50%);
+    background-color: var(--card-border);
+    transition: background-color 0.3s;
+}
+
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding-bottom: 48px;
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+/* Odd items: left side */
+.timeline-item:nth-child(odd) {
+    left: 0;
+    padding-right: 48px;
+}
+
+/* Even items: right side */
+.timeline-item:nth-child(even) {
+    left: 50%;
+    padding-left: 48px;
+}
+
+/* Dot — shared */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 16px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--text-color);
+    border: 3px solid var(--background-color);
+    z-index: 1;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Dot positioned on right edge of left items */
+.timeline-item:nth-child(odd)::before {
+    right: -7px;
+}
+
+/* Dot positioned on left edge of right items */
+.timeline-item:nth-child(even)::before {
+    left: -7px;
+}
+
+/* Content box */
+.timeline-content {
+    padding: 18px 20px;
+    border: 1.5px solid var(--card-border);
+    border-radius: 8px;
+    background: var(--card-bg-subtle);
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.exp-period {
+    display: block;
+    font-size: 13px;
+    opacity: 0.6;
+    margin-bottom: 4px;
+}
+
+.timeline-content h3 {
+    font-size: 17px;
+    margin-bottom: 3px;
+}
+
+.exp-company {
+    display: block;
+    font-size: 14px;
+    opacity: 0.75;
+    margin-bottom: 10px;
+}
+
+.timeline-content p {
+    font-size: 14px;
+    opacity: 0.85;
+    margin: 0;
+}
+
+.timeline-content ul {
+    padding-left: 20px;
+    margin: 6px 0 0 0;
+}
+
+/* Section 4: Projects */
 .projects-section {
     padding: 0 50px;
     margin-bottom: 100px;
@@ -511,7 +636,32 @@ nav .right a:last-child{
         font-size: 16px;
     }
     
-    /* Section 3: Projects*/
+    /* Section 3: Experience */
+    .experience-section {
+        padding: 0 20px;
+    }
+
+    /* Collapse alternating timeline to single column on mobile */
+    .timeline::before {
+        left: 7px;
+        transform: none;
+    }
+
+    .timeline-item,
+    .timeline-item:nth-child(even) {
+        width: 100%;
+        left: 0;
+        padding-right: 0;
+        padding-left: 36px;
+    }
+
+    .timeline-item::before,
+    .timeline-item:nth-child(even)::before {
+        left: 0;
+        right: auto;
+    }
+
+    /* Section 4: Projects*/
     .projects-section {
         padding: 0 20px;
     }
