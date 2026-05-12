@@ -4,6 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- SEO -->
+    <meta name="description" content="Gagan Jattenahalli Harishkumar (Gagan J H) — Telecommunication Engineering M.Sc. student at Politecnico di Milano. Background in signal processing, embedded software, data science, and cross-platform development.">
+    <meta name="keywords" content="Gagan J H, Gagan Jattenahalli Harishkumar, portfolio, telecommunication engineering, signal processing, embedded systems, data science, software engineering, Politecnico di Milano, Python, Flutter, gRPC, Sionna">
+    <meta name="author" content="Gagan Jattenahalli Harishkumar">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://YOUR_DOMAIN/">
+
+    <!-- Open Graph (LinkedIn, Facebook, WhatsApp previews) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://YOUR_DOMAIN/">
+    <meta property="og:title" content="Gagan Jattenahalli Harishkumar — Portfolio">
+    <meta property="og:description" content="Telecommunication Engineering M.Sc. student at Politecnico di Milano, with expertise in signal processing, embedded software, data science, and cross-platform development.">
+    <meta property="og:image" content="https://YOUR_DOMAIN/images/gagan-headshot.webp">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gagan Jattenahalli Harishkumar — Portfolio">
+    <meta name="twitter:description" content="Telecommunication Engineering M.Sc. student at Politecnico di Milano, with expertise in signal processing, embedded software, data science, and cross-platform development.">
+    <meta name="twitter:image" content="https://YOUR_DOMAIN/images/gagan-headshot.webp">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600&display=swap" rel="stylesheet">
@@ -15,6 +36,17 @@
     <link rel="stylesheet" href="styles.css">
 
     <title>Gagan J H - Portfolio</title>
+
+    <!-- Apply theme before render to prevent flash -->
+    <script>
+        (function () {
+            var saved = localStorage.getItem('theme');
+            var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (saved === 'dark' || (!saved && prefersDark)) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
 </head>
 <body>
     <nav>
@@ -72,11 +104,12 @@
             </div>
         </section>
 
-<section class="motivation-section">
-        <div class ="motivational-quote-heading">
-        <h3 class ="mq-h3">“A river cuts through rock, not because of its power, but because of its persistence.”</h3>
-    </div>
-</section>
+        <section class="motivation-section">
+                <div class ="motivational-quote-heading">
+                <h3>”A river cuts through rock, not because of its power, but because of its persistence.”</h3>
+                <p class="mq-author">— James N. Watkins</p>
+            </div>
+        </section>
 
         <section id ="skills" class="skills-section">
             <h2>Skills</h2>
@@ -367,7 +400,7 @@
         <div class="modal-content">
             <a href="javascript:void(0)" class="close-btn js-close-modal">&times;</a>
             <h3>Automated Optic Disc Segmentation Using Basis Splines-Based Active Contour</h3>
-            <p>Developed a fully automated optic disc segmentation framework for retinal fundus images using a basis-spline active contour model optimized through gradient descent and Green’s theorem. The method enables efficient and accurate segmentation with reduced computational complexity and was validated on 2,993 retinal images across the Drishti-GS, MESSIDOR, RIGA, and local datasets, achieving strong Dice similarity scores across all benchmarks.</p>
+            <p>Developed a fully automated optic disc segmentation framework for retinal fundus images using a basis-spline active contour model optimized through gradient descent and Green's theorem. The method enables efficient and accurate segmentation with reduced computational complexity and was validated on 2,993 retinal images across the Drishti-GS, MESSIDOR, RIGA, and local datasets, achieving strong Dice similarity scores across all benchmarks.</p>
                 <h4>Journal: IEEE Access</h4>
                 <h4>DOI:<a href="https://doi.org/10.1109/ACCESS.2022.3199347"
                     target="_blank"
@@ -498,6 +531,16 @@
         </div>
     </div>
 
+    <!-- Dark Mode Toggle -->
+    <button id="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fa-solid fa-moon"></i>
+    </button>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
     <!--Contact Me modal-->
     <div id="contactModal" class="modal-overlay">
         <div class="modal-content">
@@ -558,6 +601,50 @@
             e.preventDefault();
             btn.closest('.modal-overlay').style.display = "none";
         });
+    });
+
+    // Dark mode toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = themeToggle.querySelector('i');
+
+    function applyTheme(isDark) {
+        if (isDark) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            themeIcon.className = 'fa-solid fa-sun';
+        } else {
+            document.documentElement.removeAttribute('data-theme');
+            themeIcon.className = 'fa-solid fa-moon';
+        }
+    }
+
+    const systemDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const savedTheme = localStorage.getItem('theme');
+
+    // Set icon to match the already-applied theme (from the inline anti-flash script)
+    applyTheme(savedTheme ? savedTheme === 'dark' : systemDark.matches);
+
+    // Follow system changes only when the user hasn't made a manual choice
+    systemDark.addEventListener('change', (e) => {
+        if (!localStorage.getItem('theme')) applyTheme(e.matches);
+    });
+
+    themeToggle.addEventListener('click', () => {
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        applyTheme(!isDark);
+        localStorage.setItem('theme', !isDark ? 'dark' : 'light');
+    });
+
+    // Back to top button
+    const backToTop = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTop.classList.add('visible');
+        } else {
+            backToTop.classList.remove('visible');
+        }
+    });
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 </script>
 

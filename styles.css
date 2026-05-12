@@ -1,7 +1,29 @@
 :root{
     --text-color: #1a1c20;
-    --link-color: #0084ff; 
+    --link-color: #0084ff;
     --background-color: #eeeff1;
+    --card-bg: #ffffff;
+    --card-bg-subtle: #fafafa;
+    --card-border: #d3d3d3;
+    --card-hover: #e0e0e0;
+    --input-bg: #ffffff;
+    --modal-bg: #ffffff;
+    --modal-text: #666;
+    --close-btn-color: #333;
+}
+
+[data-theme="dark"] {
+    --text-color: #e8e9eb;
+    --link-color: #4da6ff;
+    --background-color: #1e1f23;
+    --card-bg: #2a2b2f;
+    --card-bg-subtle: #2a2b2f;
+    --card-border: #3a3b40;
+    --card-hover: #35363b;
+    --input-bg: #1e1f23;
+    --modal-bg: #2a2b2f;
+    --modal-text: #aaa;
+    --close-btn-color: #ccc;
 }
 
 *{
@@ -17,6 +39,8 @@ html{
 body{
     font-family: 'Poppins', sans-serif;
     background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
 }
 
 a{
@@ -29,9 +53,70 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+
     padding: 0 50px;
     height: 80px;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--background-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Dark Mode Toggle Button */
+#theme-toggle {
+    position: fixed;
+    bottom: 32px;
+    left: 32px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--text-color);
+    color: var(--background-color);
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
+    z-index: 200;
+}
+
+#theme-toggle:hover {
+    transform: rotate(20deg);
+}
+
+/* Back to Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--text-color);
+    color: var(--background-color);
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+    z-index: 200;
+}
+
+#back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+#back-to-top:hover {
+    transform: translateY(-3px);
 }
 
 nav .left a{
@@ -105,10 +190,18 @@ nav .right a:last-child{
 .motivation-section {
     padding: 0 50px;
     margin-bottom: 25px;
+    align-self: center;
 }
 
 .motivation-section h3 {
     text-align: center;
+}
+
+.motivation-section .mq-author {
+    text-align: center;
+    margin-top: 8px;
+    font-size: 15px;
+    opacity: 0.65;
 }
 
 /* Section 2: Skills*/
@@ -142,10 +235,11 @@ nav .right a:last-child{
     width: 200px;
     padding: 10px 20px;
     margin: 10px;
-    border: 1.5px solid #d3d3d3;
+    border: 1.5px solid var(--card-border);
     border-radius: 5px;
     font-size: 18px;
-    background-color: #ffffff;
+    background-color: var(--card-bg);
+    transition: background-color 0.3s, border-color 0.3s;
 }
 
 .skills-section .cells .cell img {
@@ -190,13 +284,14 @@ nav .right a:last-child{
 
     padding: 10px 20px;
     margin: 10px;
-    border: 1.5px solid #d3d3d3;
+    border: 1.5px solid var(--card-border);
     border-radius: 5px;
     font-size: 18px;
+    transition: background-color 0.3s, border-color 0.3s;
 }
 
 .projects-section .cells .cell:hover {
-    background: #e0e0e0;
+    background: var(--card-hover);
     transform: translateY(-3px);
 }
 
@@ -243,13 +338,14 @@ nav .right a:last-child{
     max-width: 800px;
     padding: 10px 20px;
     margin: 10px;
-    border: 1.5px solid #d3d3d3;
+    border: 1.5px solid var(--card-border);
     border-radius: 5px;
     font-size: 18px;
+    transition: background-color 0.3s, border-color 0.3s;
 }
 
 .publications-section .cells .cell:hover {
-    background: #e0e0e0;
+    background: var(--card-hover);
     transform: translateY(-3px);
 }
 
@@ -282,11 +378,12 @@ nav .right a:last-child{
 /* Form Container */
 .contact-container {
     width: 100%;
-    max-width: 800px; /* Matches your publication section width */
-    background: #fff;
+    max-width: 800px;
+    background: var(--card-bg);
     padding: 30px;
-    border: 1.5px solid #d3d3d3;
+    border: 1.5px solid var(--card-border);
     border-radius: 8px;
+    transition: background-color 0.3s, border-color 0.3s;
 }
 
 .contact-form {
@@ -302,15 +399,22 @@ nav .right a:last-child{
 }
 
 /* Styling inputs and textarea */
-.contact-form input, 
+.contact-form input,
 .contact-form textarea {
     width: 100%;
     padding: 12px 15px;
-    border: 1px solid #d3d3d3;
+    border: 1px solid var(--card-border);
     border-radius: 5px;
     font-size: 16px;
     outline: none;
-    transition: border-color 0.3s;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #888;
 }
 
 .contact-form input:focus, 
@@ -443,12 +547,13 @@ nav .right a:last-child{
 /* Modal Box */
 .modal-content {
     position: relative;
-    background: white;
+    background: var(--modal-bg);
     padding: 40px;
     border-radius: 10px;
     width: 90%;
     max-width: 800px;
     animation: popIn 0.2s ease-out;
+    transition: background-color 0.3s;
 }
 
 .modal-content h3,
@@ -460,7 +565,7 @@ nav .right a:last-child{
 
 .modal-content p {
     margin-bottom: 20px;
-    color: #666;
+    color: var(--modal-text);
     text-align: justify;
 }
 
@@ -470,31 +575,19 @@ nav .right a:last-child{
     to { transform: scale(1); opacity: 1; }
 }
 
-/* Make publication cells clickable */
-.projects-section .cells .cell {
-    cursor: pointer;
-    transition: 0.2s;
-    text-decoration: none;
-    color: inherit;
-    background: #fafafa;
-}
-
-.projects-section .cells .cell:hover {
-    background: #e0e0e0;
-    transform: translateY(-3px);
-}
-
-
+/* Make project/publication cells clickable */
+.projects-section .cells .cell,
 .publications-section .cells .cell {
     cursor: pointer;
-    transition: 0.2s;
+    transition: background-color 0.2s, border-color 0.2s, transform 0.2s;
     text-decoration: none;
     color: inherit;
-    background: #fafafa;
+    background: var(--card-bg-subtle);
 }
 
+.projects-section .cells .cell:hover,
 .publications-section .cells .cell:hover {
-    background: #e0e0e0;
+    background: var(--card-hover);
     transform: translateY(-3px);
 }
 
@@ -505,6 +598,7 @@ nav .right a:last-child{
     right: 15px;
     font-size: 26px;
     text-decoration: none;
-    color: #333;
+    color: var(--close-btn-color);
+    transition: color 0.3s;
 }
 
