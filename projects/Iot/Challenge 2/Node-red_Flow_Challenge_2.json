@@ -1,0 +1,633 @@
+[
+    {
+        "id": "c85032a2.7190b",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "8a9a8a88.ca1ed",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "2a9f8d4.c664ef2",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "",
+        "broker": "",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "92d0338e.f2208",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "thingspeak",
+        "broker": "mqtt3.thingspeak.com",
+        "port": "1883",
+        "clientid": "Czc2ACIZMAQKCQsAFCcmEzM",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "d3fa694e.2660b",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "HiveMQ",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "NDgUEx0zDxcvHwkYBQgiFiQ",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "f1a4c78b.7cfa88",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Temperature",
+        "icon": "dashboard"
+    },
+    {
+        "id": "44fcb118.b2e1b",
+        "type": "ui_group",
+        "z": "",
+        "name": "Default",
+        "tab": "f1a4c78b.7cfa88",
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "c28b33e7.0c0d5",
+        "type": "ui_group",
+        "z": "",
+        "name": "Temperature Chart",
+        "tab": "f1a4c78b.7cfa88",
+        "disp": true,
+        "width": "24",
+        "collapse": false
+    },
+    {
+        "id": "832fb6cd.264e48",
+        "type": "mqtt in",
+        "z": "c85032a2.7190b",
+        "name": "Code Generator",
+        "topic": "polimi/challenge_2/2023/id_code_generator/8",
+        "qos": "0",
+        "broker": "d3fa694e.2660b",
+        "x": 130,
+        "y": 220,
+        "wires": [
+            [
+                "f018bfd.1b6c34"
+            ]
+        ]
+    },
+    {
+        "id": "458b5b51.9d23a4",
+        "type": "debug",
+        "z": "c85032a2.7190b",
+        "name": "Published",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 1170,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "6586ed89.705204",
+        "type": "mqtt out",
+        "z": "c85032a2.7190b",
+        "name": "MQTT Publish",
+        "topic": "/polimi/iot2023/challenge2/10881210",
+        "qos": "",
+        "retain": "",
+        "broker": "d3fa694e.2660b",
+        "x": 1180,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "9d023fc3.d47b88",
+        "type": "mqtt in",
+        "z": "c85032a2.7190b",
+        "name": "MQTT Subscribe",
+        "topic": "/polimi/iot2023/challenge2/10881210",
+        "qos": "0",
+        "broker": "d3fa694e.2660b",
+        "x": 130,
+        "y": 660,
+        "wires": [
+            [
+                "1578dc75.eb8c24",
+                "16c88ec5.7ad319"
+            ]
+        ]
+    },
+    {
+        "id": "1578dc75.eb8c24",
+        "type": "debug",
+        "z": "c85032a2.7190b",
+        "name": "Subscribed",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 360,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "f018bfd.1b6c34",
+        "type": "function",
+        "z": "c85032a2.7190b",
+        "name": "ID filter",
+        "func": "/*Collect the data only if the count is less than 100\nand greater than 0*/\npacket = msg.packets\nif(global.get(\"count\")==-1)\n{\n    msg.payload = \"START\"\n    global.set(\"count\",global.get(\"count\")+1)\n    return msg\n}\nelse if(global.get(\"count\")==100)\n{\n    msg.payload = \"END\"\n    global.set(\"count\",global.get(\"count\")+1)\n    return msg;\n}\nif(global.get(\"count\")<100&&global.get(\"count\")>=0)\n{\n    // update the count value\n    global.set(\"count\", global.get(\"count\")+1)\n    //Filter the data to obtain the id\n    string = msg.payload\n    //search for the id sub string in the string    \n    // the id value starts 5 positions after id\n    id_start = string.search(\"id\")+5\n    // id value ends 2 positions before the string length\n    id_end = string.length-2\n    // slice the string to obtain the id value\n    id = string.slice(id_start,id_end)\n    // calculate the n value\n    var n = ((id*1+1210)%7711)\n    global.set(\"n\",n)\n    \n    msg.data = \"n: \"+n+\" count: \"+global.get(\"count\")\n    // selecting the packet that has been read from the csv file\n    msg.payload = global.get(\"Packets\")[n-1]\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 320,
+        "y": 220,
+        "wires": [
+            [
+                "a83882b3.66e14",
+                "4c5aef28.7465e8",
+                "7dc5a284.4ef6ac"
+            ]
+        ]
+    },
+    {
+        "id": "c4d20f54.f2b848",
+        "type": "inject",
+        "z": "c85032a2.7190b",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0",
+        "x": 150,
+        "y": 100,
+        "wires": [
+            [
+                "58e6ac05.960894",
+                "e6543f8d.e9836"
+            ]
+        ]
+    },
+    {
+        "id": "58e6ac05.960894",
+        "type": "function",
+        "z": "c85032a2.7190b",
+        "name": "reset value",
+        "func": "// if the values do not exist then \nif(global.get(\"n\")===undefined)\n{\n    global.set(\"n\",0)\n}\nglobal.set(\"n\",0)\n// if the values do not exist then create the values\nif(global.get(\"count\")===undefined)\n{\n    // set the value to -1 to adjust the value for \"START\"\n    global.set(\"count\",-1)\n}\nglobal.set(\"count\",-1)",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 330,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "88d1348d.0f4dc",
+        "type": "csv",
+        "z": "c85032a2.7190b",
+        "name": "",
+        "sep": ",",
+        "hdrin": true,
+        "hdrout": "",
+        "multi": "mult",
+        "ret": "\\n",
+        "temp": "",
+        "skip": "0",
+        "x": 450,
+        "y": 140,
+        "wires": [
+            [
+                "adf5ad27.072cc8"
+            ]
+        ]
+    },
+    {
+        "id": "e6543f8d.e9836",
+        "type": "file in",
+        "z": "c85032a2.7190b",
+        "name": "CSV file ",
+        "filename": "/home/user/Desktop/challenge2023_2.csv",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "x": 320,
+        "y": 140,
+        "wires": [
+            [
+                "88d1348d.0f4dc"
+            ]
+        ]
+    },
+    {
+        "id": "adf5ad27.072cc8",
+        "type": "function",
+        "z": "c85032a2.7190b",
+        "name": "Packets",
+        "func": "// read the contents of the csv file and make it global\nif(global.get(\"Packets\")===undefined)\n{\n    global.set(\"Packets\", msg.payload)\n}\nglobal.set(\"Packets\", msg.payload)\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 580,
+        "y": 140,
+        "wires": [
+            [
+                "f018bfd.1b6c34"
+            ]
+        ]
+    },
+    {
+        "id": "a83882b3.66e14",
+        "type": "debug",
+        "z": "c85032a2.7190b",
+        "name": "Data",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "data",
+        "x": 530,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "4c5aef28.7465e8",
+        "type": "function",
+        "z": "c85032a2.7190b",
+        "name": "Message publish selector",
+        "func": "// if it is the \"start\" of the \"end\"\nif(msg.payload == \"START\" || msg.payload == \"END\")\n{\n    return msg;\n}\n// check if payload is undefined\nelse if(msg.payload['Info'] === undefined)\n{\n    return\n}\nelse\n{\n    // assign the msg payload to the packet variable\n    packet = msg.payload\n    Info = packet['Info']\n    // check if the packet variable has Publish message in its Info\n    if(Info.includes(\"Publish Message\"))\n    {   \n        const publish_payload = {}\n        publish_payload.timestamp = Date.now()\n        publish_payload.id = global.get(\"n\")\n        publish_payload.payload = packet['Message']\n        msg.payload = publish_payload\n        return msg;\n    }\n   \n}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 560,
+        "y": 220,
+        "wires": [
+            [
+                "c617a03b.62f278",
+                "8b70ec4.b7ce39"
+            ]
+        ]
+    },
+    {
+        "id": "7dc5a284.4ef6ac",
+        "type": "debug",
+        "z": "c85032a2.7190b",
+        "name": "Packet",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 540,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "16c88ec5.7ad319",
+        "type": "function",
+        "z": "c85032a2.7190b",
+        "name": "Filter Celsius",
+        "func": "// assign the value of the recieved packet to a variable\npacket = msg.payload\n// check if the recieved packet has \nif(packet === undefined)\n{\n    return;\n}\nelse\n{\n    // check if the recieved packet has a payload\n    if(packet.includes(\"payload\"))\n    {\n        // find the start and end positions of the payload and assign it to the payload variable\n        payload_start = packet.search(\"payload\")+11\n        payload_end = packet.length - 4\n        payload = packet.slice(payload_start,payload_end)\n        msg.filter = payload\n        // check if the payload has temperature of unit C (Celcius)\n        if(payload.includes(\"C\"))\n        {\n            msg.packet = packet\n            // find the value of tempereature\n            split_payload = payload.split(\" \").join(\",\").split(\"\\\"\").join(\",\").split(\"\\\\\").join(\",\").split(\":\").join(\",\").split(\",\")\n            filter_split =[]\n            for(var i = 0; i< split_payload.length; i++)\n            {\n                if(split_payload[i] !== \"\")\n                {\n                 filter_split.push(split_payload[i])   \n                }\n            }\n           // split(\" \").join(\",\").split(\":\").join(\",\").split(\"\\\\\").join(\",\").split(\"\\\"\").join(\",\").split(\",\")\n            \n            // find the index of the \"range\" term\n            range_index = filter_split.indexOf(\"range\")\n            \n            // string contaning the value\n            temp_range = filter_split[range_index+1]+\",\"+filter_split[range_index+2]\n            \n            // remove the brackets and the comma and separate the two numbers\n            temp_range = temp_range.slice(1,temp_range.length-1)\n            temp_values = temp_range.split(\",\")\n            msg.temp = temp_values[temp_values.length-1]\n            return msg\n        }\n        else\n        {\n            msg.split = \"Nothing to see here\"\n            msg.value = \"NOOO\"\n            return msg\n        }\n        \n    }\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 370,
+        "y": 660,
+        "wires": [
+            [
+                "765a9287.47967c",
+                "49fe43a4.4d623c",
+                "5798cd72.ffb3bc",
+                "5274e6ef.92732"
+            ]
+        ]
+    },
+    {
+        "id": "765a9287.47967c",
+        "type": "debug",
+        "z": "c85032a2.7190b",
+        "name": "Filter payload",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "filter",
+        "x": 620,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "49fe43a4.4d623c",
+        "type": "debug",
+        "z": "c85032a2.7190b",
+        "name": "Temperature",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "temp",
+        "x": 610,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "a08eb00c.5cfa48",
+        "type": "ui_chart",
+        "z": "c85032a2.7190b",
+        "name": "Temperature Chart",
+        "group": "c28b33e7.0c0d5",
+        "order": 0,
+        "width": "0",
+        "height": "0",
+        "label": "Temperature Chart",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": true,
+        "ymin": "0",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "x": 960,
+        "y": 600,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "5798cd72.ffb3bc",
+        "type": "function",
+        "z": "c85032a2.7190b",
+        "name": "Relaying the values to the chart",
+        "func": "msg.payload = msg.temp\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 680,
+        "y": 600,
+        "wires": [
+            [
+                "a08eb00c.5cfa48"
+            ]
+        ]
+    },
+    {
+        "id": "c617a03b.62f278",
+        "type": "function",
+        "z": "c85032a2.7190b",
+        "name": "Multiple message decoder",
+        "func": "//message = msg.payload['payload']\n// checking if there are multiple packets combined into one\n//packets = global.get(\"Packets\")\n\npacket = msg.payload\nif(msg.payload == \"START\"|| msg.payload == \"END\")\n{\n    return msg;\n}\nmessage = packet[\"payload\"]\n//message  = packet[\"Message\"]\nif(packet[\"payload\"]=== undefined)\n{\n    return msg;\n}\nelse\n{\n    if(message.includes(\"},\"))\n    {\n        multiple_messages =  message.split(\"},\")\n        msg.array = multiple_messages\n        payload = [multiple_messages.length]\n        for(var m = 0; m < multiple_messages.length;m++)\n        {\n            packet[\"payload\"] = multiple_messages[m]+\"}\"\n            payload[m] = packet\n            msg.payload = payload\n        }\n        return msg;\n    }\n    else\n    {\n        return msg\n    }\n    \n}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 890,
+        "y": 220,
+        "wires": [
+            [
+                "458b5b51.9d23a4",
+                "b5d48cba.908f3",
+                "6586ed89.705204"
+            ]
+        ]
+    },
+    {
+        "id": "8b70ec4.b7ce39",
+        "type": "debug",
+        "z": "c85032a2.7190b",
+        "name": "Bulk message ",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 840,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "b5d48cba.908f3",
+        "type": "debug",
+        "z": "c85032a2.7190b",
+        "name": "Split message",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "array",
+        "x": 1180,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "5274e6ef.92732",
+        "type": "function",
+        "z": "c85032a2.7190b",
+        "name": "Write filtered payload",
+        "func": "if(msg.packet !== undefined)\n{\n    msg.payload = msg.packet\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 650,
+        "y": 660,
+        "wires": [
+            [
+                "d20f2e7c.20ac08",
+                "6274e0a.3960d2"
+            ]
+        ]
+    },
+    {
+        "id": "d20f2e7c.20ac08",
+        "type": "csv",
+        "z": "c85032a2.7190b",
+        "name": "Filtered Celsius data",
+        "sep": ",",
+        "hdrin": false,
+        "hdrout": false,
+        "multi": "mult",
+        "ret": "\\n",
+        "temp": "",
+        "skip": "0",
+        "x": 930,
+        "y": 660,
+        "wires": [
+            [
+                "f49f0bde.59d76"
+            ]
+        ]
+    },
+    {
+        "id": "f49f0bde.59d76",
+        "type": "file",
+        "z": "c85032a2.7190b",
+        "name": "Filter file writer",
+        "filename": "/home/user/Desktop/Filtered.csv",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "false",
+        "x": 1150,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6274e0a.3960d2",
+        "type": "debug",
+        "z": "c85032a2.7190b",
+        "name": "Packet",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 900,
+        "y": 720,
+        "wires": []
+    }
+]

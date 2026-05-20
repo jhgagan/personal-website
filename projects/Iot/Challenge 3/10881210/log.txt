@@ -1,0 +1,172 @@
+********************************************
+*                                          *
+*             TOSSIM Script                *
+*                                          *
+********************************************
+Initializing mac....
+Initializing radio channels....
+    using topology file: topology.txt
+    using noise file: meyer-heavy.txt
+Initializing simulator....
+Saving sensors simulation output to: simulation.txt
+Activate debug message on channel init
+Activate debug message on channel boot
+Activate debug message on channel timer
+Activate debug message on channel led_0
+Activate debug message on channel led_1
+Activate debug message on channel led_2
+Activate debug message on channel led_status
+Activate debug message on channel radio
+Activate debug message on channel radio_send
+Activate debug message on channel radio_rec
+Activate debug message on channel radio_pack
+Creating node 1...
+>>>Will boot at time 0 [sec]
+Creating node 2...
+>>>Will boot at time 0 [sec]
+Creating node 3...
+>>>Will boot at time 0 [sec]
+Creating node 4...
+>>>Will boot at time 0 [sec]
+Creating node 5...
+>>>Will boot at time 0 [sec]
+Creating node 6...
+>>>Will boot at time 0 [sec]
+Creating node 7...
+>>>Will boot at time 0 [sec]
+Creating radio channels...
+>>>Setting radio channel from node  1  to node  2  with gain  -60  dBm
+>>>Setting radio channel from node  2  to node  1  with gain  -60  dBm
+>>>Setting radio channel from node  1  to node  3  with gain  -60  dBm
+>>>Setting radio channel from node  3  to node  1  with gain  -60  dBm
+>>>Setting radio channel from node  2  to node  4  with gain  -60  dBm
+>>>Setting radio channel from node  4  to node  2  with gain  -60  dBm
+>>>Setting radio channel from node  3  to node  4  with gain  -60  dBm
+>>>Setting radio channel from node  4  to node  3  with gain  -60  dBm
+>>>Setting radio channel from node  3  to node  5  with gain  -60  dBm
+>>>Setting radio channel from node  5  to node  3  with gain  -60  dBm
+>>>Setting radio channel from node  4  to node  6  with gain  -60  dBm
+>>>Setting radio channel from node  6  to node  4  with gain  -60  dBm
+>>>Setting radio channel from node  5  to node  6  with gain  -60  dBm
+>>>Setting radio channel from node  6  to node  5  with gain  -60  dBm
+>>>Setting radio channel from node  6  to node  7  with gain  -60  dBm
+>>>Setting radio channel from node  7  to node  6  with gain  -60  dBm
+>>>Setting radio channel from node  5  to node  7  with gain  -60  dBm
+>>>Setting radio channel from node  7  to node  5  with gain  -60  dBm
+Initializing Closest Pattern Matching (CPM)...
+Reading noise model data file: meyer-heavy.txt
+Loading:##Done!
+>>>Creating noise model for node: 1
+>>>Creating noise model for node: 2
+>>>Creating noise model for node: 3
+>>>Creating noise model for node: 4
+>>>Creating noise model for node: 5
+>>>Creating noise model for node: 6
+>>>Creating noise model for node: 7
+Start simulation with TOSSIM! 
+
+
+
+DEBUG (1): Application booted.1 
+DEBUG (1): All the leds are in the off state
+DEBUG (1): Initialized the routing table for node 1 .
+DEBUG (7): Application booted.7 
+DEBUG (7): All the leds are in the off state
+DEBUG (7): Initialized the routing table for node 7 .
+DEBUG (3): Application booted.3 
+DEBUG (3): All the leds are in the off state
+DEBUG (3): Initialized the routing table for node 3 .
+DEBUG (6): Application booted.6 
+DEBUG (6): All the leds are in the off state
+DEBUG (6): Initialized the routing table for node 6 .
+DEBUG (2): Application booted.2 
+DEBUG (2): All the leds are in the off state
+DEBUG (2): Initialized the routing table for node 2 .
+DEBUG (5): Application booted.5 
+DEBUG (5): All the leds are in the off state
+DEBUG (5): Initialized the routing table for node 5 .
+DEBUG (4): Application booted.4 
+DEBUG (4): All the leds are in the off state
+DEBUG (4): Initialized the routing table for node 4 .
+DEBUG (7): Radio Started Successfully.
+DEBUG (6): Radio Started Successfully.
+DEBUG (1): Radio Started Successfully.
+DEBUG (1): Timer Started Successfully.
+DEBUG (3): Radio Started Successfully.
+DEBUG (4): Radio Started Successfully.
+DEBUG (2): Radio Started Successfully.
+DEBUG (5): Radio Started Successfully.
+DEBUG (1): Timer1 fired at time: 0:0:4.980468760
+DEBUG (1): RadioRoteC: Packet sent Successfully by 1 at time 0:0:4.980468760 
+DEBUG (3): received type: 1 
+DEBUG (3): Route Request Message Received at 3 by 1.
+		 Payload 
+		 Type: 1 
+		 Sender: 1 
+		 Requested node: 7 
+		 Destination: 7 
+DEBUG (3): Need to check the cost of the existing route and update the routing table.(ROUTE_REQUEST)
+DEBUG (3): Broadcasting further.
+DEBUG (3): Values before broadcasting. (broadcast section)
+		 Payload 
+		 Type: 1 
+		 Sender: 1 
+		 Requested node: 7 
+		 Destination: 7 
+		 Cost: 0 
+DEBUG (2): received type: 1 
+DEBUG (2): Route Request Message Received at 2 by 1.
+		 Payload 
+		 Type: 1 
+		 Sender: 1 
+		 Requested node: 7 
+		 Destination: 7 
+DEBUG (2): Need to check the cost of the existing route and update the routing table.(ROUTE_REQUEST)
+DEBUG (2): Broadcasting further.
+DEBUG (2): Values before broadcasting. (broadcast section)
+		 Payload 
+		 Type: 1 
+		 Sender: 1 
+		 Requested node: 7 
+		 Destination: 7 
+		 Cost: 0 
+DEBUG (4): received type: 1 
+DEBUG (4): Route Request Message Received at 4 by 1.
+		 Payload 
+		 Type: 1 
+		 Sender: 1 
+		 Requested node: 7 
+		 Destination: 7 
+DEBUG (4): Need to check the cost of the existing route and update the routing table.(ROUTE_REQUEST)
+DEBUG (4): Broadcasting further.
+DEBUG (4): Values before broadcasting. (broadcast section)
+		 Payload 
+		 Type: 1 
+		 Sender: 1 
+		 Requested node: 7 
+		 Destination: 7 
+		 Cost: 0 
+DEBUG (1): received type: 1 
+DEBUG (1): Route Request Message Received at 1 by 1.
+		 Payload 
+		 Type: 1 
+		 Sender: 1 
+		 Requested node: 7 
+		 Destination: 7 
+DEBUG (5): received type: 1 
+DEBUG (5): Route Request Message Received at 5 by 1.
+		 Payload 
+		 Type: 1 
+		 Sender: 1 
+		 Requested node: 7 
+		 Destination: 7 
+DEBUG (5): Need to check the cost of the existing route and update the routing table.(ROUTE_REQUEST)
+DEBUG (5): Broadcasting further.
+DEBUG (5): Values before broadcasting. (broadcast section)
+		 Payload 
+		 Type: 1 
+		 Sender: 1 
+		 Requested node: 7 
+		 Destination: 7 
+		 Cost: 0 
+Segmentation fault (core dumped)

@@ -271,45 +271,78 @@ publications in international journals and conferences.</p>
             <div class="cells">
                 <div class="cell" data-modal="pro1">
                     <h3>Semantic Communication Simulation with Sionna</h3>
-                    <p>My Master's Thesis project focused on simulating semantic communication via Feature Identification with Sionna. I designed a modular multi-process architecture using gRPC for interprocess communication and utilized Nvidia's Sionna library for physical-layer wireless simulation.</p>
+                    <p>Master's thesis. Simulated semantic communication via Feature Identification using Nvidia's Sionna physical-layer library and a modular gRPC multi-process architecture.</p>
                 </div>
 
                 <div class="cell" data-modal="pro2">
                     <h3>Internet of Things</h3>
-                    <p>IOT challenges</p>
+                    <p>Three lab challenges: CoAP packet analysis with Scapy, an MQTT data pipeline in Node-RED, and a TinyOS/nesC radio routing protocol simulated on a 7-node WSN with TOSSIM.</p>
+                    <div class="card-actions">
+                        <a href="projects/Iot/Challenge%202/Challenge2.pdf" target="_blank" class="card-btn" onclick="event.stopPropagation()">
+                            <i class="fa-solid fa-file-pdf"></i> Challenge 2 Report
+                        </a>
+                        <a href="projects/Iot/Challenge%203/10881210/IoT_Challenge_3.pdf" target="_blank" class="card-btn" onclick="event.stopPropagation()">
+                            <i class="fa-solid fa-file-pdf"></i> Challenge 3 Report
+                        </a>
+                    </div>
                 </div>
-                
+
                 <div class="cell" data-modal="pro3">
-                    <h3>GeoPhysical Imaging</h3>
-                    <p>GeoPhysical Imaging challenges</p>
+                    <h3>Geophysical Imaging</h3>
+                    <p>Two assignments covering NMO correction and velocity analysis (Report 1), and seismic migration algorithms for subsurface reflector imaging (Report 2).</p>
+                    <div class="card-actions">
+                        <a href="projects/GPI/GeoPhysicalImaging.pdf" target="_blank" class="card-btn" onclick="event.stopPropagation()">
+                            <i class="fa-solid fa-file-pdf"></i> Report 1
+                        </a>
+                        <a href="projects/GPI/GeoPhysicalImagingHW2.pdf" target="_blank" class="card-btn" onclick="event.stopPropagation()">
+                            <i class="fa-solid fa-file-pdf"></i> Report 2
+                        </a>
+                    </div>
                 </div>
-                
+
                 <div class="cell" data-modal="pro4">
                     <h3>Design and Performance Evaluation of a UAV Radar Imaging System</h3>
-                    <p>Modeled a UAV radar system to analyze target detection at varying ground ranges. I performed theoretical derivations for antenna gain and power requirements and used MATLAB to simulate the transmission and reception of Linear Frequency Modulation chirp signals. By implementing matched filtering for range compression, achieved significant signal processing gain, effectively isolating target energy from thermal noise.
-                    </p>
+                    <p>Modelled antenna gain and power budgets for a UAV pulse radar, then simulated LFM chirp transmission and matched-filter range compression in MATLAB.</p>
+                    <div class="card-actions">
+                        <a href="projects/RI/gagan_gattenahalliharishkumar_HW1_10881210.pdf" target="_blank" class="card-btn" onclick="event.stopPropagation()">
+                            <i class="fa-solid fa-file-pdf"></i> Report
+                        </a>
+                    </div>
                 </div>
 
                 <div class="cell" data-modal="pro5">
-                    <h3>Design and Performance Evaluation of a UAV Radar Imaging System</h3>
-                    <p> This project focused on developing a Synthetic Aperture Radar (SAR) imaging system for UAV platforms. The project involved processing recorded radar echoes using range compression and implementation of the Time Domain Back-Projection (TDBP) algorithm to generate high-resolution environmental images. It also involved noise filtering and performance evaluation. 
-                    </p>
+                    <h3>Design and Performance Evaluation of a Synthetic Aperture Radar System</h3>
+                    <p>Processed UAV radar echoes with range compression and Time Domain Back-Projection (TDBP) to generate focused SAR images, with noise filtering and PSLR evaluation.</p>
+                    <div class="card-actions">
+                        <a href="projects/RI/Radar_Imaging_Assignment_2.pdf" target="_blank" class="card-btn" onclick="event.stopPropagation()">
+                            <i class="fa-solid fa-file-pdf"></i> Report
+                        </a>
+                    </div>
                 </div>
-               
 
                 <div class="cell" data-modal="pro6">
                     <h3>Trenord App with GeoFencing Features</h3>
-                    <p>Developed a mobile application implementing geo-fencing to provide location-based notifications, targeted advertisements, and accurate ETA predictions for users.</p>
+                    <p>Flutter/Dart mobile app that uses geo-fencing to deliver location-based notifications, targeted ads, and real-time ETA predictions for Trenord commuters.</p>
+                    <div class="card-actions">
+                        <a href="projects/DIMA/Project%20Report.pdf" target="_blank" class="card-btn" onclick="event.stopPropagation()">
+                            <i class="fa-solid fa-file-pdf"></i> Report
+                        </a>
+                    </div>
                 </div>
 
                 <div class="cell" data-modal="pro7">
                     <h3>Bluetooth-LE 6.0 Distance Estimation</h3>
-                    <p>Evaluated BLE 6.0 distance estimation techniques (RSSI, PBR, RTT) against UWB (DS-TWR) technologies. This project utilized TinyML on data collected from a Nordic nRF54L15 Dev Kit for edge AI applications.</p>
+                    <p>Benchmarked BLE 6.0 ranging (RSSI, PBR, RTT) against UWB DS-TWR, then deployed a quantised TinyML model on a Nordic nRF54L15 for on-device inference.</p>
                 </div>
 
                 <div class="cell" data-modal="pro8">
                     <h3>Modular Hospital Ward Planner</h3>
-                    <p>Developed a modular hospital ward planner utilizing the Vulkan framework. The project involved implementing vertex and fragment shaders, allowing for asset placement and rotation across multiple camera views.</p>
+                    <p>Interactive 3D ward layout tool built with Vulkan: custom GLSL shaders, drag-and-rotate asset placement, and switchable orthographic/perspective camera views.</p>
+                    <div class="card-actions">
+                        <a href="https://github.com/jhgagan/ModularWardPlanner" target="_blank" rel="noopener noreferrer" class="card-btn" onclick="event.stopPropagation()">
+                            <i class="fa-brands fa-github"></i> GitHub
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -390,8 +423,16 @@ publications in international journals and conferences.</p>
     <div id="pro1" class="modal-overlay pro-modal">
         <div class="modal-content">
             <a href="javascript:void(0)" class="close-btn js-close-modal">&times;</a>
-            <h3>Semantic Communcation Simulation with Sionna</h3>
-
+            <h3>Semantic Communication Simulation with Sionna</h3>
+            <p><b>Master's Thesis — Politecnico di Milano</b></p>
+            <p>Designed and implemented a modular simulation framework for semantic communications using Nvidia's Sionna physical-layer wireless simulation library. The system demonstrates Feature Identification-based semantic encoding, where only task-relevant features of the source data are transmitted rather than raw bits.</p>
+            <p><b>Key contributions:</b></p>
+            <ul>
+                <li>Architected a multi-process pipeline using <b>gRPC</b> for inter-process communication, decoupling the semantic encoder, channel simulator, and semantic decoder into independently scalable modules.</li>
+                <li>Leveraged <b>Sionna</b> to model end-to-end physical-layer effects including AWGN and fading channels, enabling realistic BER vs. SNR analysis for semantic payloads.</li>
+                <li>Evaluated semantic reconstruction quality against classical bit-level transmission across varying channel conditions.</li>
+            </ul>
+            <p><b>Technologies:</b> Python, TensorFlow, Sionna, gRPC, Protocol Buffers</p>
         </div>
     </div>
 
@@ -399,7 +440,26 @@ publications in international journals and conferences.</p>
         <div class="modal-content">
             <a href="javascript:void(0)" class="close-btn js-close-modal">&times;</a>
             <h3>Internet of Things</h3>
-            <p>Add details here.</p>
+            <p>A series of three lab challenges covering IoT protocol analysis, data pipeline development, and wireless sensor network programming.</p>
+
+            <p><b>Challenge 1 — CoAP Protocol Analysis</b></p>
+            <p>Parsed and analysed Constrained Application Protocol (CoAP) network traffic from live packet captures (.pcap / .pcapng). Used Python's <b>Scapy</b> library with a custom CoAP dissector layer (RFC 7252) to extract message IDs, request codes (GET, POST), response codes (2.05 Content, 4.04 Not Found), and URI options from UDP port 5683 traffic.</p>
+
+            <p><b>Challenge 2 — Node-RED MQTT Pipeline</b></p>
+            <p>Built a data processing flow in <b>Node-RED</b> to ingest and filter MQTT messages. Implemented a JavaScript function node that parses incoming Publish Message payloads, splits batched JSON records, and attaches timestamps and unique message IDs before forwarding downstream. The flow handles single and multi-record payloads and filters non-publish traffic.</p>
+
+            <p><b>Challenge 3 — TinyOS Radio Routing on WSN</b></p>
+            <p>Implemented a dynamic routing protocol in <b>TinyOS/nesC</b> for a 7-node wireless sensor network. The protocol exchanges three message types — ROUTE_REQUEST (broadcast), ROUTE_REPLY (broadcast with cost), and DATA_PACKET (unicast) — to build and maintain per-node routing tables. Simulated the topology using <b>TOSSIM</b> on MicaZ and TelosB platforms with a realistic Meyer-Heavy noise model, and verified end-to-end packet delivery from node 1 to node 7.</p>
+
+            <p><b>Technologies:</b> Python, Scapy, Node-RED, JavaScript, TinyOS, nesC, TOSSIM</p>
+            <div class="card-actions">
+                <a href="projects/Iot/Challenge%202/Challenge2.pdf" target="_blank" class="card-btn">
+                    <i class="fa-solid fa-file-pdf"></i> Challenge 2 Report
+                </a>
+                <a href="projects/Iot/Challenge%203/10881210/IoT_Challenge_3.pdf" target="_blank" class="card-btn">
+                    <i class="fa-solid fa-file-pdf"></i> Challenge 3 Report
+                </a>
+            </div>
         </div>
     </div>
 
@@ -407,7 +467,23 @@ publications in international journals and conferences.</p>
         <div class="modal-content">
             <a href="javascript:void(0)" class="close-btn js-close-modal">&times;</a>
             <h3>Geophysical Imaging</h3>
-            <p>Add details here.</p>
+            <p>Two assignments exploring signal processing methods for subsurface imaging, completed as part of the Geophysical Imaging course at Politecnico di Milano.</p>
+
+            <p><b>Assignment 1 — Fundamentals of Seismic Imaging</b></p>
+            <p>Analysed seismic data acquisition geometry, including shot-receiver configurations and common midpoint (CMP) sorting. Applied Normal Moveout (NMO) correction to flatten hyperbolic reflection events and performed velocity analysis to estimate subsurface acoustic properties.</p>
+
+            <p><b>Assignment 2 — Migration and Imaging Algorithms</b></p>
+            <p>Implemented and compared seismic migration algorithms to collapse diffraction hyperbolas and correctly position reflectors. Studied the effect of migration aperture and velocity model accuracy on image resolution, and evaluated trade-offs between computational cost and imaging fidelity.</p>
+
+            <p><b>Technologies:</b> MATLAB, Signal Processing, Seismic Data Analysis</p>
+            <div class="card-actions">
+                <a href="projects/GPI/GeoPhysicalImaging.pdf" target="_blank" class="card-btn">
+                    <i class="fa-solid fa-file-pdf"></i> HW 1
+                </a>
+                <a href="projects/GPI/GeoPhysicalImagingHW2.pdf" target="_blank" class="card-btn">
+                    <i class="fa-solid fa-file-pdf"></i> HW 2
+                </a>
+            </div>
         </div>
     </div>
 
@@ -415,15 +491,41 @@ publications in international journals and conferences.</p>
         <div class="modal-content">
             <a href="javascript:void(0)" class="close-btn js-close-modal">&times;</a>
             <h3>Design and Performance Evaluation of a UAV Radar Imaging System</h3>
-            <p>Add details here.</p>
+            <p>Modelled and evaluated the performance of a UAV-mounted pulse radar system for ground target detection at varying ranges.</p>
+            <p><b>Key contributions:</b></p>
+            <ul>
+                <li>Derived theoretical antenna gain requirements and transmitted power budgets using the <b>Radar Range Equation</b> to satisfy a target detection SNR at multiple ground ranges.</li>
+                <li>Designed a <b>Linear Frequency Modulation (LFM / chirp)</b> waveform and simulated its transmission, propagation, and reception in MATLAB.</li>
+                <li>Applied <b>matched filtering</b> (pulse compression) to the received echoes, achieving substantial processing gain that separates target returns from thermal noise.</li>
+                <li>Analysed range resolution, range ambiguity, and Doppler tolerance as a function of bandwidth and pulse duration.</li>
+            </ul>
+            <p><b>Technologies:</b> MATLAB, Radar Systems Engineering, Signal Processing</p>
+            <div class="card-actions">
+                <a href="projects/RI/gagan_gattenahalliharishkumar_HW1_10881210.pdf" target="_blank" class="card-btn">
+                    <i class="fa-solid fa-file-pdf"></i> Report
+                </a>
+            </div>
         </div>
     </div>
 
     <div id="pro5" class="modal-overlay pro-modal">
         <div class="modal-content">
             <a href="javascript:void(0)" class="close-btn js-close-modal">&times;</a>
-            <h3>Design and Perofrmance Evalution of Synthetic Aperture Radar</h3>
-            <p>Add details here.</p>
+            <h3>Design and Performance Evaluation of a Synthetic Aperture Radar System</h3>
+            <p>Developed a complete SAR image formation pipeline for a UAV-mounted radar, processing raw recorded radar echoes into focused, high-resolution ground images.</p>
+            <p><b>Key contributions:</b></p>
+            <ul>
+                <li>Performed <b>range compression</b> on received echoes using matched filtering of the LFM chirp waveform to achieve fine range resolution.</li>
+                <li>Implemented the <b>Time Domain Back-Projection (TDBP)</b> algorithm to coherently integrate slow-time aperture samples, correctly focusing point scatterers and extended targets in the along-track dimension.</li>
+                <li>Applied noise filtering techniques to suppress sidelobes and clutter, and evaluated image quality through metrics such as Impulse Response Width and Peak Sidelobe Ratio (PSLR).</li>
+                <li>Compared TDBP imaging performance against theoretical resolution limits derived from aperture length and wavelength.</li>
+            </ul>
+            <p><b>Technologies:</b> MATLAB, SAR Signal Processing, Radar Imaging</p>
+            <div class="card-actions">
+                <a href="projects/RI/Radar_Imaging_Assignment_2.pdf" target="_blank" class="card-btn">
+                    <i class="fa-solid fa-file-pdf"></i> Report
+                </a>
+            </div>
         </div>
     </div>
 
@@ -431,7 +533,21 @@ publications in international journals and conferences.</p>
         <div class="modal-content">
             <a href="javascript:void(0)" class="close-btn js-close-modal">&times;</a>
             <h3>Trenord App with GeoFencing Features</h3>
-            <p>Add details here.</p>
+            <p><b>Design and Implementation of Mobile Applications (DIMA) — Politecnico di Milano</b></p>
+            <p>Developed a cross-platform mobile application extending Trenord's rail commuter experience with intelligent geo-fencing capabilities. The app monitors the user's location relative to defined geographic zones (stations, platforms, train corridors) and triggers context-aware actions in real time.</p>
+            <p><b>Key features:</b></p>
+            <ul>
+                <li><b>Geo-fence engine:</b> Defined and managed polygonal and circular geo-fence regions mapped to Trenord stations; triggers entry/exit events for downstream notification logic.</li>
+                <li><b>Location-based push notifications:</b> Delivers platform departure alerts and service disruption warnings when the user enters a monitored zone.</li>
+                <li><b>Targeted in-app advertising:</b> Serves contextually relevant advertisements based on the user's current station or travel corridor.</li>
+                <li><b>ETA predictions:</b> Combines live GPS position with schedule data to provide accurate estimated time-of-arrival at the next station.</li>
+            </ul>
+            <p><b>Technologies:</b> Flutter, Dart, Google Maps API, Firebase (Push Notifications)</p>
+            <div class="card-actions">
+                <a href="projects/DIMA/Project%20Report.pdf" target="_blank" class="card-btn">
+                    <i class="fa-solid fa-file-pdf"></i> Project Report
+                </a>
+            </div>
         </div>
     </div>
 
@@ -439,15 +555,37 @@ publications in international journals and conferences.</p>
         <div class="modal-content">
             <a href="javascript:void(0)" class="close-btn js-close-modal">&times;</a>
             <h3>Bluetooth-LE 6.0 Distance Estimation</h3>
-            <p>Add details here.</p>
+            <p>Benchmarked Bluetooth Low Energy 6.0 ranging techniques against Ultra-Wideband (UWB) and deployed a TinyML model on embedded hardware for on-device distance estimation.</p>
+            <p><b>Techniques evaluated:</b></p>
+            <ul>
+                <li><b>RSSI (Received Signal Strength Indication):</b> Baseline path-loss model; high variance in multipath environments.</li>
+                <li><b>PBR (Phase-Based Ranging):</b> BLE 6.0 Channel Sounding; sub-metre accuracy in line-of-sight conditions.</li>
+                <li><b>RTT (Round-Trip Time):</b> BLE 6.0 two-way time-of-flight; improved robustness over RSSI.</li>
+                <li><b>UWB DS-TWR (Double-Sided Two-Way Ranging):</b> Reference technology; centimetre-level accuracy with clock-drift cancellation.</li>
+            </ul>
+            <p><b>Edge AI deployment:</b> Collected a labelled range measurement dataset using the <b>Nordic nRF54L15 Development Kit</b> and trained a compact neural network. The quantised model was deployed on-device via <b>TinyML</b> to perform real-time distance inference directly on the microcontroller, eliminating cloud round-trips.</p>
+            <p><b>Technologies:</b> BLE 6.0, UWB, Nordic nRF54L15, TinyML, Python, Embedded C</p>
         </div>
     </div>
 
-        <div id="pro8" class="modal-overlay pro-modal">
+    <div id="pro8" class="modal-overlay pro-modal">
         <div class="modal-content">
             <a href="javascript:void(0)" class="close-btn js-close-modal">&times;</a>
             <h3>Modular Hospital Ward Planner</h3>
-            <p>Add details here.</p>
+            <p>Built an interactive 3D ward layout application using the <b>Vulkan</b> graphics API, enabling hospital designers to plan and reconfigure room arrangements in real time.</p>
+            <p><b>Key features:</b></p>
+            <ul>
+                <li><b>Custom rendering pipeline:</b> Implemented vertex and fragment shaders in GLSL to render modular hospital assets (beds, equipment, walls) with per-object material properties.</li>
+                <li><b>Asset placement and rotation:</b> Users can drag, drop, and freely rotate furniture and equipment items within the ward grid using mouse/keyboard input.</li>
+                <li><b>Multiple camera views:</b> Supports orthographic top-down planning view and perspective walkthrough view, switchable at runtime without reloading the scene.</li>
+                <li><b>Modular asset system:</b> Ward components are defined as self-contained geometry + material bundles, enabling new asset types to be added without modifying the core renderer.</li>
+            </ul>
+            <p><b>Technologies:</b> Vulkan, GLSL, C++, Linear Algebra, Computer Graphics</p>
+            <div class="card-actions">
+                <a href="https://github.com/jhgagan/ModularWardPlanner" target="_blank" rel="noopener noreferrer" class="card-btn">
+                    <i class="fa-brands fa-github"></i> GitHub
+                </a>
+            </div>
         </div>
     </div>
 

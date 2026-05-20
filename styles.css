@@ -741,6 +741,59 @@ nav .right a:last-child{
     transform: translateY(-3px);
 }
 
+/* Project card paragraph */
+.projects-section .cells .cell p {
+    font-size: 14px;
+    text-align: center;
+    opacity: 0.85;
+    margin: 0;
+}
+
+/* Card action buttons (download / link) */
+.card-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.card-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 12px;
+    font-size: 13px;
+    border: 1.5px solid var(--link-color);
+    border-radius: 5px;
+    color: var(--link-color);
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+}
+
+.card-btn:hover {
+    background-color: var(--link-color);
+    color: #fff;
+}
+
+/* Modal scroll for long content */
+.pro-modal .modal-content {
+    max-height: 85vh;
+    overflow-y: auto;
+}
+
+.modal-content ul {
+    padding-left: 20px;
+    margin-bottom: 14px;
+    color: var(--modal-text);
+    font-size: 14px;
+}
+
+.modal-content ul li {
+    margin-bottom: 6px;
+}
+
 /* Close button inside modal */
 .close-btn {
     position: absolute;

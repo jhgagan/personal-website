@@ -1,0 +1,50 @@
+var Info = pack.payload['Info']
+
+    if(Info.includes("Publish Message"))
+    {   
+        if(msg.payload['Message']===undefined)
+        {
+            mess={"timestamp":Date.now(),"id":global.get("n"),"payload":""}
+            msg.payload = mess
+            return msg;
+        }
+        else
+        {
+            var arr = msg.payload['Message'].split(/},/g)
+            if(arr.length>2)
+            {
+                message = []
+                for( var i = 0; i<arr.length; i++)
+                {
+                    var string = arr[i]
+                    if(i!=arr.length-1)
+                    {
+                        string = string.trim(" ")
+                        string = string.trim(",")
+                        string = string+"}"
+                    }
+                    //mess="{"+"timestamp:"+Date.now()+",id:"+global.get("n")+",payload:"+string+"}"
+                    mess={"timestamp":Date.now(),"id":global.get("n"),"payload":string}
+                    message.push(mess)
+                    //msg.payload+=string+"\n"
+                }
+                //global.set("message",[])
+                //msg.payload = "No. of Publish messages:"+arr.length+"\n"+"\n"+msg.payload['Message']
+                //msg.payload = "number of topics:"+(topics.length)+"topics:"+topics
+                msg.payload = message
+            return msg;
+            }
+            else
+            {
+                mess={"timestamp":Date.now(),"id":global.get("n"),"payload":msg.payload['Message']}
+                msg.payload = mess
+                return msg;
+            }
+        }
+    }
+    else
+    {
+        //msg.payload = "No publish message found\n"+msg.payload['Info']
+        return msg.payload = "";
+    }
+    return msg.payload = "";
