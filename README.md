@@ -23,16 +23,6 @@ personal-site/
 └── images/          # Skill logos and headshot (WebP)
 ```
 
-## Running Locally
-
-No build step required — open `index.html` directly in a browser, or serve with any static file server:
-
-```bash
-npx serve .
-# or
-python -m http.server
-```
-
 ## Contact
 
 - Email: [jhgagan9@gmail.com](mailto:jhgagan9@gmail.com)
