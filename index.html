@@ -344,6 +344,16 @@ publications in international journals and conferences.</p>
                         </a>
                     </div>
                 </div>
+
+                <div class="cell" data-modal="pro9">
+                    <h3>Autonomous Vehicle Sensor Fusion — EESTEC Engineering Challenge 2026</h3>
+                    <p><strong>1st Place</strong> — Multi-sensor fusion pipeline (LiDAR, radar, camera + EKF) for real-time opponent race car tracking at Yas Marina Circuit, developed at Politecnico di Milano.</p>
+                    <div class="card-actions">
+                        <a href="projects/EC/Presentation.pdf" target="_blank" class="card-btn" onclick="event.stopPropagation()">
+                            <i class="fa-solid fa-file-pdf"></i> Presentation
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -589,6 +599,33 @@ publications in international journals and conferences.</p>
         </div>
     </div>
 
+
+    <div id="pro9" class="modal-overlay pro-modal">
+        <div class="modal-content">
+            <a href="javascript:void(0)" class="close-btn js-close-modal">&times;</a>
+            <h3>Autonomous Vehicle Sensor Fusion — EESTEC Engineering Challenge 2026</h3>
+            <p><b>Team Secure Motion — Politecnico di Milano &nbsp;|&nbsp; 1st Place</b></p>
+            <p>Developed a real-time multi-sensor fusion pipeline to track an opponent race car relative to an ego vehicle during a race at Yas Marina Circuit. The system fuses LiDAR, radar, and camera data through an Extended Kalman Filter to produce stable state estimates of range, relative heading, absolute velocity, and uncertainty bounds.</p>
+            <p><b>Dataset:</b> 120 seconds of racing data from <a href="https://a2rl.io/team-detail/5/polimove-autonomous-racing-team" target="_blank" rel="noopener noreferrer">PoliMove</a> — 2,388 synchronized frames from 7 cameras, 3 LiDARs, and 4 radars stored in a ROS2 SQLite3 bag.</p>
+            <p><b>Key contributions:</b></p>
+            <ul>
+                <li>Parsed CDR-serialized ROS2 bag data and synchronized multi-rate sensor clocks across 14 active topics.</li>
+                <li>Implemented <b>PointCloud2 blob decoding</b> with bounding-box filtering and 20th-percentile forward depth for precise LiDAR range extraction.</li>
+                <li>Decoded <b>radar Doppler returns</b> for direct radial velocity measurements and cross-sensor consistency.</li>
+                <li>Deployed <b>YOLOv8</b> for camera-based object detection with a low-floor confidence cascade to handle formula car appearances absent from the training set.</li>
+                <li>Built a 2D world-frame <b>Extended Kalman Filter</b> with asynchronous sensor update models for LiDAR range, radar position, and radar radial velocity, integrated with ego vehicle kinematics from GPS/IMU dead reckoning.</li>
+                <li>Achieved ~0.3 m positional variance and ~0.2 m/s velocity variance across the full 120-second run.</li>
+                <li>Built a 4-panel real-time dashboard: 7-camera mosaic with YOLOv8 overlays, bird's-eye LiDAR view, radar scatter map, and HUD telemetry strip.</li>
+            </ul>
+            <p><b>Team:</b> Gagan Jhunjhunwala &middot; Ashkriti Dewan &middot; Hardik Nayak</p>
+            <p><b>Technologies:</b> Python, ROS2, YOLOv8, Extended Kalman Filter, PointCloud2, Radar CDR Decoding, MATLAB, NumPy, OpenCV, Matplotlib</p>
+            <div class="card-actions">
+                <a href="projects/EC/Presentation.pdf" target="_blank" class="card-btn">
+                    <i class="fa-solid fa-file-pdf"></i> Presentation
+                </a>
+            </div>
+        </div>
+    </div>
 
     <!-- Publication Modals -->
     <div id="pub1" class="modal-overlay pub-modal">
